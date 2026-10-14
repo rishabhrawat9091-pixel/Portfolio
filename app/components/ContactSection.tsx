@@ -18,7 +18,10 @@ export const ContactSection: React.FC = () => {
     soundFX.playPowerUp();
     try {
       const res = await axios.post("/api/Contact", formState)
-      console.log(res);
+      if (res) {
+        console.log(res);
+
+      }
       setIsSubmitting(true);
       setTimeout(() => {
         setIsSubmitting(false);

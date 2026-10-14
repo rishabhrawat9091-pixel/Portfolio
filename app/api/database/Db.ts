@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import mongoose from "mongoose";
 export const db = async () => {
     try {
-        const connect = await mongoose.connect(process.env.MONGO_URI as string);
+        const connect = await mongoose.connect(process.env.DATABASE_URL as string);
         if (!connect) {
             console.log("Mongoos connected error");
 
